@@ -14,3 +14,9 @@ project/boot/
 
 /metastore_db/
 derby.log
+
+dist/*
+project/plugins/project/
+.history
+.cache
+.lib/

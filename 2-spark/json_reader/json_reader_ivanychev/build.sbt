@@ -1,5 +1,4 @@
 resolvers += "Spark Packages Repo" at "http://dl.bintray.com/spark-packages/maven"
-resolvers += "Bintray sbt plugin releases"  at "http://dl.bintray.com/sbt/sbt-plugin-releases/"
 
 
 name := "json_reader_ivanychev"
