@@ -1,15 +1,11 @@
-# boston-crimes
+Run example:
 
-*add project short description*
-
-## Accessing the library
-
-*How to access the code*
-
-## Documentation
-
-*A link to the documentation*
-
-## How to contribute
-
-*How others can contribute to the project*
+```bash
+~/Downloads/spark-2.4.5-bin-hadoop2.7/bin/spark-submit \
+  --master "local[*]" \
+  --class com.example.BostonCrimesMap \
+  boston-crimes-assembly-0.0.1.jar \
+    /Users/ivanychev/Code/de/sandbox/crimes-in-boston/crime.csv \
+    /Users/ivanychev/Code/de/sandbox/crimes-in-boston/offense_codes.csv \
+    /Users/ivanychev/Code/de/sandbox/crimes-in-boston/outputs
+```
