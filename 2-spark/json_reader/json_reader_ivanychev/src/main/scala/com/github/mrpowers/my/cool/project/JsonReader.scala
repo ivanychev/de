@@ -11,18 +11,17 @@ object JsonReader extends App {
     .getOrCreate()
   import spark.implicits._
 
-  println("!!! Hello!")
   if (args.length != 1) {
     println("Path to the JSON must be the only argument")
   }
-  println("!!! ", args)
 
   val path = args(0);
   implicit val jsonDefaultFormats: DefaultFormats = DefaultFormats
-  val caseClassesCollection: Array[Wine] = spark.sparkContext.textFile(path)
-    .map(input => parse(input).extract[Wine])
-    .collect()
 
-  caseClassesCollection.foreach(println)
+  // Parse and print.
+  spark.sparkContext.textFile(path)
+    .map(input => parse(input).extract[Wine])
+    .foreach(println)
+
   spark.stop()
 }
